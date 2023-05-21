@@ -18,7 +18,7 @@ jobs:
     
     - name: Build the Docker image
       run: |
-        cd Cat && docker build . -t willido/cat:action10
+        cd cat && docker build . -t willido/cat:action10
         cd ../helloworld && docker build . -t willido/helloworld:action10
         cd ../web-nginx && docker build . -t willido/mynginx:action10
         

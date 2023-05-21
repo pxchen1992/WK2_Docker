@@ -18,16 +18,16 @@ jobs:
     
     - name: Build the Docker image
       run: |
-        cd cat && docker build . -t willido/cat:action10
-        cd ../helloworld && docker build . -t willido/helloworld:action10
-        cd ../web-nginx && docker build . -t willido/mynginx:action10
+        cd cat && docker build . -t pengxiangchen1992/cat:action10
+        cd ../helloworld && docker build . -t pengxiangchen1992/helloworld:action10
+        cd ../web-nginx && docker build . -t pengxiangchen1992/mynginx:action10
         
     - name: Upload the Docker image
       run: |
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker push willido/cat:action10
-        docker push willido/helloworld:action10
-        docker push willido/mynginx:action10
+        docker push pengxiangchen1992/cat:action10
+        docker push pengxiangchen1992/helloworld:action10
+        docker push pengxiangchen1992/mynginx:action10
 
     - name: SSH to Remote Server and Run docker-compose
       uses: appleboy/ssh-action@v0.1.10
